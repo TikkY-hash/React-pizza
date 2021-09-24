@@ -1,0 +1,24 @@
+.menu {
+  position: fixed;
+  height: 100%;
+  width: 35%;
+  top: 0;
+  left: 0;
+  background-color: #FFCD4F;
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+  &.active__menu {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+  }
+}
+
+
+@media (max-width : 426px) {
+  .menu {
+    width: 100%;
+  }
+}

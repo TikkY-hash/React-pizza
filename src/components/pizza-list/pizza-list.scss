@@ -1,0 +1,40 @@
+.content {
+  padding: 40px 0;
+
+  &__title {
+    margin: 35px 0;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .pizza__list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      padding-right: 2%;
+    }
+  }
+}
+
+@media (max-width : 1025px) {
+  .content {
+    .pizza__list {
+      justify-content: space-between;
+    }
+    .pizza__list_item {
+      padding-right: 2% !important; 
+    }
+  }
+}
+
+@media (max-width : 426px) {
+  .content {
+    .pizza__list_item {
+      margin: 0 auto;
+    }
+  }
+}
