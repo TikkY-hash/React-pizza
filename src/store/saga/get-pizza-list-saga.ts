@@ -4,7 +4,6 @@ import {onUpdateLoad,onUpdateData} from "../reducers/pizza-data-slice";
 import getRequest from "./request-axios";
 import {onUpdateSort,onUpdateFilter} from "../reducers/filter-reducer-slice";
 
-
 export function* onChangeSortData() {
     while (true) {
         yield take([onUpdateSort.type,onUpdateFilter.type])
