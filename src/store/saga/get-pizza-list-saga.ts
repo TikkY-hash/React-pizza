@@ -11,19 +11,19 @@ export function* onChangeSortData() {
         yield put(onUpdateLoad())
         const {filterButtonsId,filterSortLabel}  = yield select(state => state.filterReducerSlice)
 
-        const result : IPizzaListType[] = yield call(getRequest,'http://localhost:8000/pizzas',filterSortLabel,filterButtonsId)
+        const result : IPizzaListType[] = yield call(getRequest,'/pizzas',filterSortLabel,filterButtonsId)
         yield put(onUpdateData(result))
     }
 }
 
 export function* onUpdateResult() {
-    const result : IPizzaListType[] = yield call(getRequest,'http://localhost:8000/pizzas')
+    const result : IPizzaListType[] = yield call(getRequest,'/pizzas')
 
     yield put(onUpdateData(result))
 }
 
 export function* workerPizzaListSaga() {
-   const result : IPizzaListType[] = yield call(getRequest,'http://localhost:8000/pizzas')
+   const result : IPizzaListType[] = yield call(getRequest,'/pizzas')
 
    yield put(onUpdateData(result))
 }
