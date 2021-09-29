@@ -65,5 +65,12 @@
 @media (max-width : 426px) {
   .filter-panel__label {
     margin-top: 30px;
+    b {
+      font-size: 15px;
+    }
+    span {
+      font-size: 15px;
+    }
   }
 }
+

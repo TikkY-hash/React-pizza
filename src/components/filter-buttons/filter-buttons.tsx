@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react';
+import React, {useCallback} from 'react';
 import './filter-buttons.scss'
 import FilterListItem from "../filter-list-item";
 import classNames from "classnames";
@@ -6,7 +6,6 @@ import {shallowEqual} from "react-redux";
 import { IFilterType} from "../../types/filter-type";
 import {useTypedSelector} from "../hooks/hook-types-selector";
 import useAction from "../hooks/hook-bind";
-import Menu from "../menu";
 
 
 const filterButtonsArray : IFilterType[] = [
@@ -22,7 +21,6 @@ const FilterButtons = () => {
     const {filterButtonsId} = useTypedSelector(({filterReducerSlice}) => ({
         filterButtonsId : filterReducerSlice.filterButtonsId
     }), shallowEqual)
-    const [activeMenu,onUpdateActiveMenu] = useState(false)
 
     const {onUpdateFilter} = useAction()
 
@@ -33,9 +31,7 @@ const FilterButtons = () => {
     return (
         <>
             <div className="filter-buttons">
-                <ul className={classNames({
-                    active__burger_list : activeMenu
-                })}>
+                <ul>
                     { filterButtonsArray!.map(props => {
                         const {id} = props
 

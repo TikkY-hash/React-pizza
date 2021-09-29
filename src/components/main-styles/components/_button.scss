@@ -147,3 +147,12 @@
     }
   }
 }
+
+@media (max-width : 351px) {
+  .button--outline {
+    padding: 10px 10px;
+  }
+  .pizza-block__price {
+    font-size: 20px !important;
+  }
+}
