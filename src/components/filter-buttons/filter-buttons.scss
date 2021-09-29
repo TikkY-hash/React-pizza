@@ -4,7 +4,7 @@
 .filter-buttons {
   position: relative;
   width: 75%;
-  overflow: scroll;
+ 
   margin: 0 auto;
   ul {
     display: flex;
@@ -141,5 +141,6 @@
 @media (max-width : 1290px) {
   .filter-buttons {
     margin-bottom: 50px !important;
+    overflow: scroll;
   }
 }
