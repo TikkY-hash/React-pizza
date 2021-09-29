@@ -1,4 +1,4 @@
-import React, {useCallback} from 'react';
+import React, {useCallback, useState} from 'react';
 import './filter-buttons.scss'
 import FilterListItem from "../filter-list-item";
 import classNames from "classnames";
@@ -6,6 +6,7 @@ import {shallowEqual} from "react-redux";
 import { IFilterType} from "../../types/filter-type";
 import {useTypedSelector} from "../hooks/hook-types-selector";
 import useAction from "../hooks/hook-bind";
+
 
 
 const filterButtonsArray : IFilterType[] = [
@@ -21,6 +22,7 @@ const FilterButtons = () => {
     const {filterButtonsId} = useTypedSelector(({filterReducerSlice}) => ({
         filterButtonsId : filterReducerSlice.filterButtonsId
     }), shallowEqual)
+
 
     const {onUpdateFilter} = useAction()
 
@@ -47,6 +49,7 @@ const FilterButtons = () => {
                         )
                     })}
                 </ul>
+
             </div>
         </>
     );
