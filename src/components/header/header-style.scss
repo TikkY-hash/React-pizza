@@ -4,9 +4,17 @@
   border-bottom: 1px solid $gray-line;
   padding: 40px 0;
 
-  .container {
+  .container__logo {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .container__logo {
+    flex-direction: column;
   }
 }

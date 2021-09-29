@@ -12,9 +12,14 @@
   }
   .pizza__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-column-gap: 30px;
-    
+  }
+}
+
+@media (max-width : 400px) {
+  .pizza__list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
   }
 }
 

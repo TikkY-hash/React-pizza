@@ -51,23 +51,7 @@ const FilterButtons = () => {
                         )
                     })}
                 </ul>
-                <div className={classNames( {
-                    burger__wrapper : true,
-                    active : activeMenu
-                })} onClick={() => onUpdateActiveMenu(!activeMenu)}>
-                    <div className="burger">
-                        <span/>
-                    </div>
-                    <div className="filter__label">
-                        <span/>
-                        <h4>фильтры</h4>
-                    </div>
-                </div>
             </div>
-            <Menu
-                filterButtonsArray={filterButtonsArray}
-                active={activeMenu}
-            />
         </>
     );
 };

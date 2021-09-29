@@ -6,7 +6,7 @@ import './header-style.scss'
 const Header : FC = () => {
     return (
         <div className="header">
-            <div className="container">
+            <div className="container__logo">
                 <HeaderLogo/>
                 <HeaderTrash/>
             </div>

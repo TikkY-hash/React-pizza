@@ -276,6 +276,12 @@ body {
 }
 
 
+@media (max-width : 1330px) {
+  .content__top {
+    flex-direction: column;
+  }
+}
+
 @media (max-width : 426px) {
   .content__top {
     flex-direction: column;

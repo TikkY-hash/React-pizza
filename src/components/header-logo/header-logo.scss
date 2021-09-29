@@ -14,3 +14,15 @@
     color: #7b7b7b;
   }
 }
+
+@media (max-width: 768px) {
+  .header__logo {
+    padding-bottom: 10%;
+    h1 {
+      font-size: 20px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}

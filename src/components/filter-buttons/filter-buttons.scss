@@ -3,6 +3,9 @@
 
 .filter-buttons {
   position: relative;
+  width: 75%;
+  overflow: scroll;
+  margin: 0 auto;
   ul {
     display: flex;
     li {
@@ -133,81 +136,10 @@
   }
 }
 
-@media (max-width: 769px) {
-  .active__burger_list {
-    left: -40px !important;
-  }
-  .burger__wrapper {
-    left: 27px !important;
-  }
-}
-
-@media (max-width: 426px) {
-  .burger__wrapper {
-    left: 120px !important;
-  }
-}
 
 
-
-
-@media (max-width: 425px) {
-  .burger__wrapper {
-    left:  99px !important;
-  }
-}
-
-@media (max-width: 321px) {
-  .burger__wrapper {
-    left:  69px !important;
-  }
-}
-
-
-@media (max-width : 426px) {
-  .burger__wrapper {
-    position: initial !important;
-    &.active {
-      position: absolute !important;
-    }
-  }
-}
-
-@media (max-width: 1025px) {
+@media (max-width : 1290px) {
   .filter-buttons {
-    ul {
-      display: none;
-    }
-    .burger__wrapper {
-        display: flex;
-        left: 45px;
-      &.active {
-         & {
-           margin-bottom: 20%;
-         }
-        .burger {
-          span {
-            width: 0px;
-            height: 3px;
-            &:before {
-              width: 25px;
-              height: 3px;
-              transform: translateY(0px) rotate(45deg);
-              transition: 0.5s;
-            }
-            &:after {
-              width: 25px;
-              height: 3px;
-              transform: translateY(0px) rotate(-45deg);
-              transition: 0.5s;
-            }
-          }
-        }
-        .filter__label {
-          display: none;
-        }
-      }
-    }
+    margin-bottom: 50px !important;
   }
 }
-
